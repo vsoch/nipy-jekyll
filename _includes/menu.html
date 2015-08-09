@@ -1,0 +1,36 @@
+<nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav"{% endif %}>
+    <div id="nav-list">
+        <a href="{{ site.baseurl }}">Home</a>
+
+        <!-- Nav pages -->
+        {% for package in site.data.nav %}
+             {% if package.subcategories != null %}
+             <li class="dropdown">
+                 <a href="{{ site.url }}{{ package.url }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">{{ package.title }}<i class="fa fa-angle-down"></i></a>
+                 <ul class="dropdown-menu">
+                 {% for subcategory in package.subcategories %}
+                     <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                 {% endfor %}
+                 {% else %}
+                     <li><a href="{{ site.url }}{{ package.href }}">{{ package.title }}</a>{% endif %}</li>
+                 {% endfor %}
+
+	<!--{% for page in site.pages %}
+	    {% if page.layout == "page" %}
+	      <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
+	    {% endif %}
+	  {% endfor %}-->
+    
+    <!-- Nav links -->
+{% include link.html %}
+
+	</div>
+  
+  <!-- Nav footer -->
+	{% if site.custom_nav_footer == true %}
+	  {% include nav-footer-custom.html %}
+	{% else %}
+	  {% include nav-footer.html %}
+	{% endif %}
+
+</nav>

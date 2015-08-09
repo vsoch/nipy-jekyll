@@ -1,0 +1,25 @@
+- title: "Blog"
+  href: "/"
+
+- title: "Projects"
+  href: "/projects/"
+  subcategories:
+    - subtitle: "Analysis Pipeline Management"
+      subhref: "/analysis-pipeline-management/"
+    - subtitle: "Diffusion MRI"
+      subhref: "/diffusion-mri/"
+    - subtitle: "File and Data Management"
+      subhref: "/file-and-data-management/"
+    - subtitle: "Functional MRI"
+      subhref: "/functional-mri/"
+    - subtitle: "Human Electrophysiology"
+      subhref: "/human-electrophysiology/"
+
+- title: "Help"
+  href: "/help/"
+
+- title: "Contribute"
+  href: "/contribute/"
+
+- title: "Code of Conduct"
+  href: "/code-of-conduct/"
