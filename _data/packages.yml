@@ -1,7 +1,10 @@
 - title: "Projects"
+  category_count: 6
+  package_count: 9
   categories:
     - subtitle: "Analysis Pipeline Management"
       tag: "analysis-pipeline-management"
+      count: 1
       packages:
         - name: "nipype"
           tag: "nipype"
@@ -10,6 +13,7 @@
           description: "Nipype provides a uniform interface to existing neuroimaging software and facilitates interaction between these packages within a single workflow."
     - subtitle: "Diffusion MRI"
       tag: "diffusion-mri"
+      count: 2
       packages:
         - name: "dipy"
           tag: "nipy"
@@ -18,6 +22,7 @@
           description: "Dipy is a free and open source software project focusing mainly on diffusion magnetic resonance imaging (dMRI) analysis."
     - subtitle: "File I/O and Data Management"
       tag: "file-data-management"
+      count: 3
       packages:
         - name: "nibabel"
           tag: "nibabel"
@@ -31,6 +36,7 @@
           description: "SciTran SDM delivers efficient and robust archiving, organization, and sharing of scientific data"
     - subtitle: "Functional MRI"
       tag: "functional-mri"
+      count: 4
       packages:
         - name: "Nitime"
           tag: "nitime"
@@ -44,6 +50,7 @@
           description: "NIPY is not only the name of the Neuroimaging in Python community, but also a python project for analysis of structural and functional neuroimaging data."
     - subtitle: "Machine Learning"
       tag: "machine-learning"
+      count: 5
       packages:
         - name: "Nilearn"
           tag: "nilearn"
@@ -57,6 +64,7 @@
           description: "PyMVPA is a Python package intended to ease statistical learning analyses of large datasets."
     - subtitle: "Human Electrophysiology"
       tag: "human-electrophysiology"
+      count: 6
       packages:
         - name: "MNE"
           tag: "mne"
