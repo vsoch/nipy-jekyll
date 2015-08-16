@@ -16,4 +16,4 @@ general:
 test:
   override:
     - jekyll build
-    - grep -rl $OLDPATH $HOME/nipy-jekyll/_site/ | xargs sed -i s@$OLDPATH@$NEWPATH@g
+    - grep -rl $OLDPATH $HOME/nipy-jekyll/_site/ | xargs sed -i "s@$OLDPATH@$NEWPATH@g"
