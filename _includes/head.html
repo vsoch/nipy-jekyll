@@ -11,20 +11,12 @@
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script> 
-       {% if page.url == "/blog/index.html" or page.url == "/contribute/index.html" or page.url == "/help/index.html" or page.url == "/conduct/index.html" %} 
-       <script src="{{ "../js/tipsy.js" | prepend: site.baseurl }}"></script>
-       {% else %}
-       <script src="{{ "js/tipsy.js" | prepend: site.baseurl }}"></script>
-       {% endif %}
+       <script src="{{ "/js/tipsy.js" | prepend: site.baseurl }}"></script>
+       
 
 	<!-- CSS & fonts -->
-        {% if page.url == "/blog/index.html" or page.url == "/contribute/index.html" or page.url == "/help/index.html" or page.url == "/conduct/index.html" %} 
-       <link rel="stylesheet" href="{{ "../css/bootstrap.min.css" | prepend: site.baseurl }}">
-       <link rel="stylesheet" href="{{ "../css/main.css" | prepend: site.baseurl }}">
-       {% else %}       
-       <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | prepend: site.baseurl }}">
-       <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
-       {% endif %}
+       <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+       <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 

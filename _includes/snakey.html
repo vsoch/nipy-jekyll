@@ -5,11 +5,7 @@
             <div id="snakey"></div>
         </div>
         <div class="col-md-10">
-            {% if page.url == "/blog/index.html" or page.url == "/contribute/index.html"  or page.url == "/help/index.html" or page.url == "/conduct/index.html" %}
-            <img src="{{ site.baseurl }}../img/nipy.svg" width="150px">
-            {% else %}
-            <img src="{{ site.baseurl }}img/nipy.svg" width="150px">
-            {% endif %}
+            <img src="/img/nipy.svg" width="150px">
         </div>
    </div>
 </div>
@@ -20,11 +16,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        {% if page.url == "/blog/index.html" or page.url == "/contribute/index.html" or page.url == "/help/index.html" or page.url == "/conduct/index.html" %} 
         return "<a href='../" + d.tag + ".html'><strong><span style='color:tomato'>" + d.tag + "</span></a>";
-        {% else %}
-        return "<a href='/" + d.tag + ".html'><strong><span style='color:tomato'>" + d.tag + "</span></a>";
-        {% endif %}
 })
 
 // D3
@@ -92,11 +84,7 @@ var circle = svg.selectAll("circle")
     .on('mouseout.tip', tip.hide)
     .on('mouseover.tip', tip.show)
     .on('click', function(d){
-        {% if page.url == "/blog/index.html" or page.url == "/contribute/index.html" or page.url == "/help/index.html" or page.url == "/conduct/index.html" %} 
-        window.location = "../" + d.tag + ".html";
-        {% else %}
         window.location = "/" + d.tag + ".html";
-        {% endif %}
     })
     .call(force.drag);
 
