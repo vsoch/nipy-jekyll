@@ -11,7 +11,7 @@
             <a href='#{{ category.tag }}' class="list-group-item list-class" data-toggle="collapse" style="color:aqua;font-weight:400">{{ category.subtitle }}</a>
                 <div class="collapse" id="{{ category.tag }}" style="color:lime">
                 {% for package in category.packages %}
-                    <a href="/{{ package.tag }}.html" style="border-radius:0px; color:lime;" id="{{ package.tag }}" class="list-group-item list-project">{{ package.name }}</a>
+                    <a href="{{ site.baseurl }}{{ package.tag }}.html" style="border-radius:0px; color:lime;" id="{{ package.tag }}" class="list-group-item list-project">{{ package.name }}</a>
                 {% endfor %}
                 </div>
              {% endfor %}

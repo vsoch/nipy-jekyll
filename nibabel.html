@@ -1,13 +1,8 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>{{ project }}</h1>
-<h5>{{ classname }}</h5>
-<a href="{{ url }}" target="_blank" class="btn btn-sm btn-default"><span class="fa fa-home"></span> {{ project }}</a> 
-<a href="{{ github }}" target="_blank" class="btn btn-sm btn-default"><span class="fa fa-github"></span> Github</a>
-
-<h4>Read / write access to some common neuroimaging file formats.</h4>
+---
+layout: package
+---
 
 <p>This package provides read +/- write access to some common medical and neuroimaging file formats, including: ANALYZE (plain, SPM99, SPM2 and later), GIFTI, NIfTI1, NIfTI2, MINC1, MINC2, MGH and ECAT as well as Philips PAR/REC. We can read and write Freesurfer geometry, and read Freesurfer morphometry and annotation files. There is some very limited support for DICOM. NiBabel is the successor of PyNIfTI.</p>
 
 <p>The various image format classes give full or selective access to header (meta) information and access to the image data is made available via NumPy arrays.</p>
-{% endblock %}
+

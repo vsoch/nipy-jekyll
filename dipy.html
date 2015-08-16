@@ -1,9 +1,4 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>{{ project }}</h1>
-<h5>{{ classname }}</h5>
-<a href="{{ url }}" target="_blank" class="btn btn-sm btn-default"><span class="fa fa-home"></span> {{ project }}</a> 
-<a href="{{ github }}" target="_blank" class="btn btn-sm btn-default"><span class="fa fa-github"></span> Github</a>
+---
+layout: package
+---
 
-<h4>Dipy is a free and open source software project focusing mainly on diffusion magnetic resonance imaging (dMRI) analysis.</h4>
-{% endblock %}

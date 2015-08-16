@@ -1,11 +1,5 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>{{ project }}</h1>
-<h5>{{ classname }}</h5>
-<a href="{{ url }}" target="_blank" class="btn btn-sm btn-default"><span class="fa fa-home"></span> {{ project }}</a> 
-<a href="{{ github }}" target="_blank" class="btn btn-sm btn-default"><span class="fa fa-github"></span> Github</a>
-
-<h4>Nitime is a library for time-series analysis of data from neuroscience experiments.</h4>
+---
+layout: package
+---
 
 <p>It contains a core of numerical algorithms for time-series analysis both in the time and spectral domains, a set of container objects to represent time-series, and auxiliary objects that expose a high level interface to the numerical machinery and make common analysis tasks easy to express with compact and semantically clear code.</p>
-{% endblock %}
