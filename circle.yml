@@ -1,6 +1,9 @@
 machine:
   ruby:
     version: rbx-2.2.6
+  environment:
+    $OLDPATH: '$HOME/nipy-jekyll/_site/nipy'
+    $NEWPATH: '$HOME/nipy-jekyll/_site'
 
 dependencies:
   pre:
@@ -13,3 +16,4 @@ general:
 test:
   override:
     - jekyll build
+    - grep -rl $OLDPATH $HOME/nipy-jekyll/_site/ | xargs sed -i s@$OLDPATH@$NEWPATH@g
