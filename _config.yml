@@ -18,9 +18,9 @@ paginate_path: /blog/page:num/
 
 # Default values
 defaults:
-  - 
-   scope:
-      path: "/"
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
