@@ -1,1 +1,5 @@
-<script src="{{ "js/main.js" | prepend: site.baseurl }}"></script>	
+{% if page.url == "/blog/index.html" or page.url == "/contribute/index.html"  or page.url == "/help/index.html" or page.url == "/conduct/index.html" %}
+<script src="{{ "../js/main.js" | prepend: site.baseurl }}"></script>
+{% else %}
+<script src="{{ "js/main.js" | prepend: site.baseurl }}"></script>
+{% endif %}	
