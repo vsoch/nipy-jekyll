@@ -1,3 +1,7 @@
+dependencies:
+  pre:
+    - gem install jekyll
+
 general:
   artifacts:
     - "./_site"
