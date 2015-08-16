@@ -8,13 +8,13 @@ author:
   url: "nipy.github.io"
 
 # Build settings
-baseurl: "" # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: "/" # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
-permalink: /blog/:title
+permalink: /:title
 paginate: 8
-paginate_path: /blog/page:num/
+paginate_path: /page:num/
 
 # Default values
 defaults:
