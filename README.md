@@ -13,13 +13,7 @@ To render on circle.cl as an artifact, the base-url, specified in [_config.yml](
 
 ###### Install Jekyll and RubyGems
 
-Here are [complete instructions](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll) and my workflow for Ubuntu are below:
-
-
-### Branch
-nipy has two branches: 
-- ``master``: is for developing pourpose.
-- ``gh-pages``: is only for demo site.  
+Here are [complete instructions](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll)
 
 
 Refer to the [Jekyll documentation](http://jekyllrb.com) for further help.
