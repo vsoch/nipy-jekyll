@@ -29,6 +29,10 @@
   @include nav-position(left);
 }
 
+.sidenav {
+    width: 20%;
+}
+
 /* Toggle class to open menu */
 
 #nav.menu-open {
@@ -251,8 +255,7 @@ code {
 /* Footer */
 
 footer {
-  background-color: $main-color;
-  color: $background-color;
+  color: $text-color;
   text-align: center;
   padding: 0.6667em 0;
 }
