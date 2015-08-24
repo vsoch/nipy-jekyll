@@ -12,6 +12,6 @@ general:
 
 test:
   override:
-    - sed "s,/nipy-jekyll,https://circle-artifacts.com/gh/$CIRCLE_USERNAME/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_NUM/artifacts/0$HOME/$CIRCLE_PROJECT_REPONAME/_site,g" "_config.yml" > "_circle_config.yml"
+    - sed "s,/nipy-jekyll,/gh/$CIRCLE_USERNAME/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_NUM/artifacts/0$HOME/$CIRCLE_PROJECT_REPONAME/_site,g" "_config.yml" > "_circle_config.yml"
     - cat _circle_config.yml
     - jekyll build --config _circle_config.yml
