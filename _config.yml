@@ -12,7 +12,7 @@ baseurl: "/nipy-jekyll/"
 markdown: kramdown
 source: .
 destination: ./_site
-permalink: /:title
+permalink: "/nipy-jekyll/:title"
 paginate: 8
 paginate_path: /page:num/
 
