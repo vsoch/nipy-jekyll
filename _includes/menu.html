@@ -1,7 +1,7 @@
 <nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav"{% endif %}>
 
     <div id="nav-list">
-        <a href="{{ site.baseurl }}home.html">Home</a>
+        <a href="{{ "/home.html" | prepend: site.baseurl }}">Home</a>
 
         <!-- Nav pages -->
         <a href="#projects" class="list-group-item list-group-item" data-toggle="collapse">Projects <i class="fa fa-caret-down"></i></a>
@@ -11,7 +11,7 @@
             <a href='#{{ category.tag }}' class="list-group-item list-class" data-toggle="collapse" style="color:aqua;font-weight:400">{{ category.subtitle }}</a>
                 <div class="collapse" id="{{ category.tag }}" style="color:lime">
                 {% for package in category.packages %}
-                    <a href="{{ site.baseurl }}{{ package.tag }}.html" style="border-radius:0px; color:lime;" id="{{ package.tag }}" class="list-group-item list-project">{{ package.name }}</a>
+                    <a href="{{ "/" + package.tag + ".html" | prepend: site.baseurl }} style="border-radius:0px; color:lime;" id="{{ package.tag }}" class="list-group-item list-project">{{ package.name }}</a>
                 {% endfor %}
                 </div>
              {% endfor %}
