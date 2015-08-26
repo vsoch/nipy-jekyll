@@ -2,23 +2,31 @@
 layout: default
 ---
 
-<h2>nipy.github.io</h2>
+<h2 style="margin-top:20px; margin-bottom:20px">nipy.github.io</h2>
 <a href="{{ site.baseurl }}">
     <img src="{{ prepend: site.baseurl }}" >
 </a>
 
 
-<!-- Posts -->
-<ul id="posts">
-
-	{% for post in paginator.posts %}
-
-	  <li class="post">
-	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
-	  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
-	  </li>
-
-    {% endfor %}
-
-</ul>
+<div class="panel-group" id="accordion">
+        {% for grouping in site.data.packages %}
+            {% for category in grouping.categories %}
+                {% for package in category.packages %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#pr{{ package.tag }}">{{ package.name }} </a>
+                            <a href="{{ package.github }}" target="_blank"><i style="color:#666;float:right;" class="fa fa-github"> </i></a>
+                            <a href="{{ package.doc }}" target="_blank"><i style="color:#333;float:right; margin-right:5px" class="fa fa-home"></i></a>
+                        </h4>
+                    </div>
+                    <div id="pr{{ package.tag }}" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                        <p>{{ package.description }}</p> <a href="{{ site.baseurl }}{{ package.tag }}.html"> <span style="float:right">learn more</a></span></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+             {% endfor %}
+</div>
+       {% endfor %}

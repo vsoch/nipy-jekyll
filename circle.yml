@@ -17,4 +17,3 @@ test:
     - sed -i "s,/nipy-jekyll/,$BASEURL,g" "_config.yml"
     - sed -i "s,/page:num/,$BASEURLpage:num/,g" "_config.yml"
     - jekyll build
-
