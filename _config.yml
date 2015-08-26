@@ -8,22 +8,13 @@ author:
   url: "nipy.github.io"
 
 # Build settings
-baseurl: "" # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: "/nipy-jekyll/"
 markdown: kramdown
 source: .
 destination: ./_site
-permalink: /:title
+permalink: "/nipy-jekyll/:title"
 paginate: 8
 paginate_path: /page:num/
-
-# Default values
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
 
 # Custom variables
 version: "1.1.0"
