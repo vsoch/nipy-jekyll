@@ -1,41 +1,78 @@
 ---
 layout: default
 ---
-<h1>Contribute</h1>
 
-<h2>Contribute to one of the nipy projects</h2>
+<h1 style="padding-bottom:50px">How do you want to contribute?</h1>
+<p style="padding-bottom:100px">We invite all members of the community to contribute. Have an idea, research update, or conference summary? <a href="http://neuroimaging.tumblr.com/submit">submit it</a> right away, or <a href="http://neuroimaging.tumblr.com/ask">ask us a question</a>.</p>
 
-<p>If you are using a software library, consider contributing to its development. It’s fun, it’s helpful, and if you are not careful, you might learn something useful. Each project has its own workflow pertaining to contributions, but it usually involves raising an issue on the project’s Github repository to discuss the proposed change, making a fork of the repository on github, making changes to the code and submitting a pull request. If you are just getting started with this, don’t be shy: ask for help!</p>
-
-<h2>Contribute to this website</h2>
-
-<p>This website is hosted in a Github repository. To contribute content to the website, you will need to create your own fork of the repository</p>
-
-<h2>Adding projects to the project directory</h2
-
-<p>To add a project to the growing project directory, edit the project-directory/index.md file. Submit the edit as a pull request through github.</p>
-
-<h2>Adding a blog post</h2>
-
-<p>It would be wonderful if various members of the community would add posts to the blog that can be found here. Tell us about a new paper you’ve written or read, a workshop or conference that you’ve organized or attended, a new trick that you’ve learned, or a pet peeve of yours (anyone want to tell us why from foo import * is a bad idea?)! If you are already writing somewhere else, put in a post linking to your nipy-related posts!</p>
-
-<p>To add a post, create a new file under the blog folder. Name it something like: mypost.md, be sure to include a metadata block that looks something like this:</p>
-
-<div class="well">
----
-title: "The new Nipy community portal"
-categories: articles
-modified: 2015-06-02
-comments: true
-author: arokem
----
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+                <h3>Developer</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                {% include svg/github.svg %}
+            </div>
+            <div class="col-md-8">
+                <div class="well infobox">
+                <a href='#add-a-package'>Add a package</a><br>
+                <a href='#write-a-post'>Write a blog post</a><br>
+                <a href='#contribute-to-site'>Contribute to this website</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+            <h3>Neuroimaging Scientist</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                {% include svg/scientist.svg %}
+            </div>
+            <div class="col-md-8">
+                <div class="well infobox">
+                <a href='#ask-a-question'>Ask a question</a><br>
+                <a href='#learn-about-nipy'>Learn about our organization</a><br>
+                <a href='#research-opportunities'>Research Opportunities</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<p>If you don’t want people to comment on your post, simply set the comments block to false. But isn’t it fun to have a conversation? Add a section about yourself to the _data/authors.yml file and a corresponding image to the images folder. If you want to add images to your post, put these image files in the images folder at the root level of the repository as well. Your own photo will be automatically added to the end of your post, and you can insert the content images into your post markdown text such as the following:</p>
+{% for grouping in site.data.contribute %}
+    {% for category in grouping.categories %}
+    <h2 style="margin-bottom:25px;margin-top:25px">{{ category.subtitle }}</h2>
+        <div class="panel-group" id="accordion">
+            {% for question in category.questions %}
+                <div class="panel panel-default">
+                    <div id="{{ question.tag }}" class="panel-heading" style="background-color:#649700;color:white">
+                        <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#pr{{ question.tag }}">{{ question.question }} </a>
+                        </h4>
+                    </div>
+                    <div id="pr{{ question.tag }}" class="panel-collapse collapse in">
+                        <div class="panel-body" style="padding-left:60px; padding-right:60px">
+                        <p>{{ question.answer }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+             {% endfor %}
+</div>
+{% endfor %}
 
-<pre><code>
-![Reggie](http://nipy.github.io/images/reggie.png)
-</code></pre>
-<p>Which will result in and image like this:</p>
-
+<p>Thanks for stopping by!</p>
 <img src="http://nipy.github.io/images/reggie.png"/>
+
+</div>

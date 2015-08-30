@@ -24,4 +24,15 @@ text.xaxis {
     font: 14px sans-serif;
  }
 
+// Contribute Page informatiion boxes
 
+.infobox {
+    height:124px;
+}
+
+// SVG mouseover effects
+nipy-svg:hover,
+nipy-svg:focus {
+    text-decoration: none;
+    color: #1d9b6c;
+}
