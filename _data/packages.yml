@@ -1,6 +1,6 @@
 - title: "Projects"
   category_count: 6
-  package_count: 9
+  package_count: 10
   categories:
     - subtitle: "Analysis Pipeline Management"
       tag: "analysis-pipeline-management"
@@ -22,8 +22,13 @@
           description: "Dipy is a free and open source software project focusing mainly on diffusion magnetic resonance imaging (dMRI) analysis."
     - subtitle: "File I/O and Data Management"
       tag: "file-data-management"
-      count: 3
+      count: 4
       packages:
+        - name: "mindboggle"
+          tag: "mindboggle"
+          doc: "http://www.mindboggle.info/"
+          github: "https://github.com/nipy/mindboggle"
+          description: "The purpose of Mindboggle is to improve the accuracy, precision, and consistency of labeling and morphometry of brain imaging data, and to promote open science by making all data, software, and documentation freely and openly available."
         - name: "nibabel"
           tag: "nibabel"
           doc: "http://nipy.org/nibabel/"
